@@ -7,6 +7,9 @@ android {
     namespace = "com.mlhakyz.streamlog"
     compileSdk = 34
 
+    buildFeatures {
+        viewBinding = true
+    }
     defaultConfig {
         applicationId = "com.mlhakyz.streamlog"
         minSdk = 24
