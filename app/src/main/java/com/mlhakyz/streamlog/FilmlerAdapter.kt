@@ -1,6 +1,7 @@
 package com.mlhakyz.streamlog
 
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -44,6 +45,10 @@ class FilmlerAdapter(private val mContext:Context,private val filmlerListe:List<
             "drawable",mContext.packageName))
 
         holder.film_card.setOnClickListener {
+
+            val intent = Intent(mContext,DetayActivity::class.java)
+            intent.putExtra("filmNesne",film)
+            mContext.startActivity(intent)
 
         }
 
