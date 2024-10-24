@@ -1,6 +1,7 @@
 package com.mlhakyz.streamlog
 
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -38,7 +39,9 @@ class KategoriAdapter(private val mContext: Context,private val kategoriListe: L
         holder.textViewKategoriAd.text = kategori.kategori_ad
 
         holder.kategori_card.setOnClickListener {
-
+            val intent = Intent(mContext,FilmlerActivity::class.java)
+            intent.putExtra("kategoriNesne",kategori)
+            mContext.startActivity(intent)
         }
     }
 }
